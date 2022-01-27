@@ -1,0 +1,1638 @@
+{
+	"info": {
+		"_postman_id": "c70d2c69-7254-43ad-8fff-dbf88b2a34c0",
+		"name": "EDP-INVOICING-MSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "purchases",
+			"item": [
+				{
+					"name": "1.0.0",
+					"item": [
+						{
+							"name": "documents",
+							"item": [
+								{
+									"name": "{doc Id}",
+									"item": [
+										{
+											"name": "products",
+											"item": [
+												{
+													"name": "{doc Prod Id}",
+													"item": [
+														{
+															"name": "/purchases/documents/:docId/products/:docProdId",
+															"request": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/documents/:docId/products/:docProdId?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"documents",
+																		":docId",
+																		"products",
+																		":docProdId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "docId",
+																			"value": "2",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "docProdId",
+																			"value": "1",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "/purchases/documents/:docId/products/:docProdId",
+															"request": {
+																"method": "DELETE",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/documents/:docId/products/:docProdId?espId=2&hardReset=true",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"documents",
+																		":docId",
+																		"products",
+																		":docProdId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "2"
+																		},
+																		{
+																			"key": "hardReset",
+																			"value": "true"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "docId",
+																			"value": "3",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "docProdId",
+																			"value": "3",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "/purchases/documents/:docId/products/:docProdId/transfer",
+															"request": {
+																"method": "PATCH",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/documents/:docId/products/:docProdId/transfer?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"documents",
+																		":docId",
+																		"products",
+																		":docProdId",
+																		"transfer"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "docId",
+																			"value": "2",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "docProdId",
+																			"value": "4",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": []
+														}
+													]
+												},
+												{
+													"name": "/purchases/documents/:docId/products",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/purchases/documents/:docId/products?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"documents",
+																":docId",
+																"products"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "docId",
+																	"value": "2",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/purchases/documents/:docId/products",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"quantity\": 15,\n    \"unitMeasureValue\": 250,\n    \"unitNetPrice\": 4,\n    \"percentageVat\": 18,\n    \"netValue\": 13,\n    \"vatValue\": 12,\n    \"grossValue\": 39,\n    \"transfered\": false,\n    \"expirationDate\": \"2020-11-14\",\n    \"product\": 2\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/documents/:docId/products?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"documents",
+																":docId",
+																"products"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "docId",
+																	"value": "2",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"quantity\": 15,\n    \"unitMeasureValue\": 250,\n    \"unitNetPrice\": 4,\n    \"percentageVat\": 18,\n    \"netValue\": 13,\n    \"vatValue\": 12,\n    \"grossValue\": 39,\n    \"transfered\": false,\n    \"expirationDate\": \"2020-11-14\",\n    \"product\": 2\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/1.0.0/documents/:docId/products?espId=2",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"1.0.0",
+																		"documents",
+																		":docId",
+																		"products"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "2"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "docId",
+																			"value": "2",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/purchases/documents/:docId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/:docId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														":docId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "docId",
+															"value": "2",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/purchasesdocuments/:docId",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 4,\n    \"signature\": \"3/2020\",\n    \"number\": 3,\n    \"type\": 0,\n    \"date\": \"2020-11-15\",\n    \"state\": 0,\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/:docId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														":docId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "docId",
+															"value": "4",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/purchases/documents/:docId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/:docId?espId=1&hardReset=true",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														":docId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														},
+														{
+															"key": "hardReset",
+															"value": "true"
+														}
+													],
+													"variable": [
+														{
+															"key": "docId",
+															"value": "3",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/purchases/documents/:docId/change/state",
+											"request": {
+												"method": "PATCH",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/:docId/change/state?espId=1&state=0",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														":docId",
+														"change",
+														"state"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														},
+														{
+															"key": "state",
+															"value": "0"
+														}
+													],
+													"variable": [
+														{
+															"key": "docId",
+															"value": "2",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "types",
+									"item": [
+										{
+											"name": "{doc Type Id}",
+											"item": [
+												{
+													"name": "/purchases/documents/types/:docTypeId",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/purchases/documents/types/:docTypeId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"documents",
+																"types",
+																":docTypeId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "docTypeId",
+																	"value": "2",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/purchases/documents/types/:docTypeId",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/purchasesdocuments/types/:docTypeId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchasesdocuments",
+																"types",
+																":docTypeId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "docTypeId",
+																	"value": "2",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/purchases/documents/types",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/types?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														"types"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/purchases/documents/types",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"wzk\",\n    \"name\": \"wzk\",\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/types?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														"types"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"code\": \"wzk\",\n    \"name\": \"wzk\",\n    \"description\": \"\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/1.0.0/documents/types?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"1.0.0",
+																"documents",
+																"types"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/purchases/documents/types",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 3,\n    \"code\": \"wzk\",\n    \"name\": \"wzk\",\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/documents/types?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"documents",
+														"types"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"id\": 3,\n    \"code\": \"wzk\",\n    \"name\": \"wzk\",\n    \"description\": \"\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/1.0.0/documents/types?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"1.0.0",
+																"documents",
+																"types"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/purchases/documents",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/purchases/documents?espId=1&suppliersId=2&suppliersId=1&docTypeIds=0&docTypeIds=1&docStates=0&docStates=1&startDate=2020-01-01&endDate=2022-01-01",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"documents"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "suppliersId",
+													"value": "2"
+												},
+												{
+													"key": "suppliersId",
+													"value": "1"
+												},
+												{
+													"key": "docTypeIds",
+													"value": "0"
+												},
+												{
+													"key": "docTypeIds",
+													"value": "1"
+												},
+												{
+													"key": "docStates",
+													"value": "0"
+												},
+												{
+													"key": "docStates",
+													"value": "1"
+												},
+												{
+													"key": "startDate",
+													"value": "2020-01-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2022-01-01"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/purchases/documents",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"signature\": \"01/2020\",\n    \"number\": 1,\n    \"type\": 0,\n    \"date\": \"2020-12-01\",\n    \"state\": 1,\n    \"description\": \"\",\n    \"supplier\": 1,\n    \"products\": [\n        {\n            \"quantity\": 5,\n            \"unitMeasureValue\": 250,\n            \"unitNetPrice\": 1,\n            \"percentageVat\": 7,\n            \"netValue\": 5,\n            \"vatValue\": 4,\n            \"grossValue\": 3,\n            \"transfered\": false,\n            \"expirationDate\": \"2020-12-27\",\n            \"product\": 5\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/purchases/documents?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"documents"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"signature\": \"01/2020\",\n    \"number\": 1,\n    \"type\": 0,\n    \"date\": \"2020-12-01\",\n    \"state\": 1,\n    \"description\": \"\",\n    \"supplier\": 1,\n    \"products\": [\n        {\n            \"quantity\": 5,\n            \"unitMeasureValue\": 250,\n            \"unitNetPrice\": 1,\n            \"percentageVat\": 7,\n            \"netValue\": 5,\n            \"vatValue\": 4,\n            \"grossValue\": 3,\n            \"transfered\": false,\n            \"expirationDate\": \"2020-12-27\",\n            \"product\": 5\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/1.0.0/documents?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"1.0.0",
+														"documents"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "msv",
+							"item": [
+								{
+									"name": "/purchases/msv/suppliers-products-summary",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/purchases/msv/suppliers-products-summary?espId=1&startDate=2020-02-01&endDate=2022-02-01&suppliersIds=1&suppliersIds=2&documentTypesIds=1&documentTypesIds=3&documentStates=0&documentStates=1&productsIds=4&productsIds=5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"msv",
+												"suppliers-products-summary"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "startDate",
+													"value": "2020-02-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2022-02-01"
+												},
+												{
+													"key": "suppliersIds",
+													"value": "1"
+												},
+												{
+													"key": "suppliersIds",
+													"value": "2"
+												},
+												{
+													"key": "documentTypesIds",
+													"value": "1"
+												},
+												{
+													"key": "documentTypesIds",
+													"value": "3"
+												},
+												{
+													"key": "documentStates",
+													"value": "0"
+												},
+												{
+													"key": "documentStates",
+													"value": "1"
+												},
+												{
+													"key": "productsIds",
+													"value": "4"
+												},
+												{
+													"key": "productsIds",
+													"value": "5"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/purchases/msv/products-summary",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/purchases/msv/products-summary?espId=1&startDate=2020-02-01&endDate=2021-02-01&documentTypesIds=1&documentTypesIds=1&documentStates=0&documentStates=0&productsIds=4&productsIds=3",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"msv",
+												"products-summary"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "startDate",
+													"value": "2020-02-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2021-02-01"
+												},
+												{
+													"key": "documentTypesIds",
+													"value": "1"
+												},
+												{
+													"key": "documentTypesIds",
+													"value": "1"
+												},
+												{
+													"key": "documentStates",
+													"value": "0"
+												},
+												{
+													"key": "documentStates",
+													"value": "0"
+												},
+												{
+													"key": "productsIds",
+													"value": "4"
+												},
+												{
+													"key": "productsIds",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "suppliers",
+							"item": [
+								{
+									"name": "{supplier Id}",
+									"item": [
+										{
+											"name": "contacts",
+											"item": [
+												{
+													"name": "{supp Contact Person Id}",
+													"item": [
+														{
+															"name": "/purchases/suppliers/:supplierId/contacts/:suppContactPersonId",
+															"request": {
+																"method": "GET",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/suppliers/:supplierId/contacts/:suppContactPersonId?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"suppliers",
+																		":supplierId",
+																		"contacts",
+																		":suppContactPersonId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "supplierId",
+																			"value": "2",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "suppContactPersonId",
+																			"value": "3",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": []
+														},
+														{
+															"name": "/purchases/suppliers/:supplierId/contacts/:suppContactPersonId",
+															"request": {
+																"method": "DELETE",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/suppliers/:supplierId/contacts/:suppContactPersonId?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"suppliers",
+																		":supplierId",
+																		"contacts",
+																		":suppContactPersonId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "supplierId",
+																			"value": "1",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "suppContactPersonId",
+																			"value": "2",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"response": []
+														}
+													]
+												},
+												{
+													"name": "/purchases/suppliers/:supplierId/contacts",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"firstName\": \"Jogny\",\n    \"lastName\": \"Eaxre\",\n    \"email\": \"example@gmail.com\",\n    \"phoneNumber\": \"000000000\",\n    \"description\": \"\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/suppliers/:supplierId/contacts?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"suppliers",
+																":supplierId",
+																"contacts"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "supplierId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"firstName\": \"Jogny\",\n    \"lastName\": \"Eaxre\",\n    \"email\": \"example@gmail.com\",\n    \"phoneNumber\": \"000000000\",\n    \"description\": \"\"\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/1.0.0/suppliers/:supplierId/contacts?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"1.0.0",
+																		"suppliers",
+																		":supplierId",
+																		"contacts"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "supplierId",
+																			"value": "3",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/purchases/suppliers/:supplierId/contacts",
+													"request": {
+														"method": "PUT",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"firstName\": \"Jogny\",\n    \"lastName\": \"Eaxre\",\n    \"email\": \"example@gmail.com\",\n    \"phoneNumber\": \"000000000\",\n    \"description\": \"\",\n    \"id\": 1,\n    \"supplier\": 1\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/suppliers/:supplierId/contacts?espId=8925393",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"suppliers",
+																":supplierId",
+																"contacts"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "8925393"
+																}
+															],
+															"variable": [
+																{
+																	"key": "supplierId",
+																	"value": "8925393",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "PUT",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"firstName\": \"Jogny\",\n    \"lastName\": \"Eaxre\",\n    \"email\": \"example@gmail.com\",\n    \"phoneNumber\": \"000000000\",\n    \"description\": \"\",\n    \"id\": 1,\n    \"supplier\": 1\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/purchases/1.0.0/suppliers/:supplierId/contacts?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"purchases",
+																		"1.0.0",
+																		"suppliers",
+																		":supplierId",
+																		"contacts"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "supplierId",
+																			"value": "1",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/purchases/suppliers/:supplierId/contacts/all",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/purchases/suppliers/:supplierId/contacts/all?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"suppliers",
+																":supplierId",
+																"contacts",
+																"all"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "supplierId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/purchases/suppliers/:supplierId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/suppliers/:supplierId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"suppliers",
+														":supplierId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "supplierId",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/purchases/suppliers/:supplierId",
+											"request": {
+												"method": "PATCH",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n \"nip\": \"1231231231\",\n    \"code\": \"sl1\",\n    \"companyName\": \"Jurek A.H Gliwice\",\n    \"krs\": \"\",\n    \"regon\": \"\",\n    \"email\": \"ex@gmail.com\",\n    \"phoneNumber\": \"123584896\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"00-000\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"fax\": \"\",\n    \"homepage\": \"\",\n    \"archive\": true,\n    \"description\": \"\",\n    \"supplierContactPersons\": [\n        {\n            \"firstName\": \"Jan\",\n            \"lastName\": \"Kowalski\",\n            \"email\": \"\",\n            \"phoneNumber\": \"789582458\",\n            \"description\": \"\"\n        }\n    ],\n    \"id\": 1\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/suppliers/:supplierId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"suppliers",
+														":supplierId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "supplierId",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PATCH",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"nip\": \"occaecat L\",\n    \"code\": \"deseru\",\n    \"companyName\": \"dolore irure elit culpa\",\n    \"krs\": \"i\",\n    \"regon\": \"incidi\",\n    \"email\": \"laboris deserunt aliqua dolore\",\n    \"phoneNumber\": \"cillu\",\n    \"streetAddress\": \"sint aliqua mollit aliquip eu\",\n    \"postalCode\": \"adip\",\n    \"city\": \"in sint do\",\n    \"state\": \"qui\",\n    \"fax\": \"nulla Duis pariatur \",\n    \"homepage\": \"tempor elit\",\n    \"archive\": false,\n    \"description\": \"minim\",\n    \"supplierContactPersons\": [\n        {\n            \"firstName\": \"esse Duis in occaecat ut\",\n            \"lastName\": \"et mollit aliquip labore dolor\",\n            \"email\": \"ullamco\",\n            \"phoneNumber\": \"fugi\",\n            \"description\": \"amet eiusmod\",\n            \"id\": 55033101,\n            \"supplier\": 4801648\n        },\n        {\n            \"firstName\": \"ut laborum\",\n            \"lastName\": \"aute\",\n            \"email\": \"officia\",\n            \"phoneNumber\": \"cillum \",\n            \"description\": \"consequat sint anim\",\n            \"id\": 75025302,\n            \"supplier\": -3131199\n        }\n    ],\n    \"id\": 27631734\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/purchases/1.0.0/suppliers/:supplierId?espId=8925393",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"purchases",
+																"1.0.0",
+																"suppliers",
+																":supplierId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "8925393"
+																}
+															],
+															"variable": [
+																{
+																	"key": "supplierId",
+																	"value": "8925393",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/purchases/suppliers/:supplierId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/purchases/suppliers/:supplierId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"suppliers",
+														":supplierId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "supplierId",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/purchases/suppliers",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/purchases/suppliers?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"suppliers"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/purchases/suppliers",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nip\": \"1231231231\",\n    \"code\": \"sl1\",\n    \"companyName\": \"Jurek A.H Gliwice\",\n    \"krs\": \"\",\n    \"regon\": \"\",\n    \"email\": \"\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"fax\": \"\",\n    \"homepage\": \"\",\n    \"archive\": true,\n    \"description\": \"\",\n    \"supplierContactPersons\": [\n        {\n            \"firstName\": \"Jan\",\n            \"lastName\": \"Kowalski\",\n            \"email\": \"\",\n            \"phoneNumber\": \"789582458\",\n            \"description\": \"\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/purchases/suppliers?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"purchases",
+												"suppliers"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"nip\": \"1231231231\",\n    \"code\": \"sl1\",\n    \"companyName\": \"Jurek A.H Gliwice\",\n    \"krs\": \"\",\n    \"regon\": \"\",\n    \"email\": \"\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\",\n    \"fax\": \"\",\n    \"homepage\": \"\",\n    \"archive\": true,\n    \"description\": \"\",\n    \"supplierContactPersons\": [\n        {\n            \"firstName\": \"Jan\",\n            \"lastName\": \"Kowalski\",\n            \"email\": \"\",\n            \"phoneNumber\": \"789582458\",\n            \"description\": \"\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/purchases/1.0.0/suppliers?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"purchases",
+														"1.0.0",
+														"suppliers"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/purchases/products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/purchases/products?espId=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"purchases",
+										"products"
+									],
+									"query": [
+										{
+											"key": "espId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://edp-gateway.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}

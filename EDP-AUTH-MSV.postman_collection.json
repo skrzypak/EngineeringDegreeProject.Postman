@@ -1,0 +1,992 @@
+{
+	"info": {
+		"_postman_id": "4fcab2b0-1ffa-4bc6-8320-dcd5bf48d620",
+		"name": "EDP-AUTH-MSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "1.0.0",
+					"item": [
+						{
+							"name": "enterprises",
+							"item": [
+								{
+									"name": "{enterprise Id}",
+									"item": [
+										{
+											"name": "/auth/enterprises/:enterpriseId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/enterprises/:enterpriseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"enterprises",
+														":enterpriseId"
+													],
+													"variable": [
+														{
+															"key": "enterpriseId",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/auth/enterprises/:enterpriseId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"nip\": \"5978987894\",\n    \"companyName\": \"SPP\",\n    \"email\": \"spp@gmail.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/enterprises/:enterpriseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"enterprises",
+														":enterpriseId"
+													],
+													"variable": [
+														{
+															"key": "enterpriseId",
+															"value": "5",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"nip\": \"5978987894\",\n    \"companyName\": \"SPP\",\n    \"email\": \"spp@gmail.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/auth/1.0.0/enterprises/:enterpriseId",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"1.0.0",
+																"enterprises",
+																":enterpriseId"
+															],
+															"variable": [
+																{
+																	"key": "enterpriseId",
+																	"value": "5",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "22604495"
+												}
+											]
+										},
+										{
+											"name": "/auth/enterprises/:enterpriseId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/enterprises/:enterpriseId",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"enterprises",
+														":enterpriseId"
+													],
+													"variable": [
+														{
+															"key": "enterpriseId",
+															"value": "4",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/auth/1.0.0/enterprises/:enterpriseId/left",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/enterprises/:enterpriseId/left",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"enterprises",
+														":enterpriseId",
+														"left"
+													],
+													"variable": [
+														{
+															"key": "enterpriseId",
+															"value": "5",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/auth/enterprises",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/auth/enterprises",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"enterprises"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/auth/enterprises",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"nip\": \"5978987895\",\n    \"companyName\": \"SPP\",\n    \"email\": \"spp@gmail.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/enterprises",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"enterprises"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"nip\": \"5978987895\",\n    \"companyName\": \"SPP\",\n    \"email\": \"spp@gmail.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"\",\n    \"city\": \"\",\n    \"state\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/1.0.0/enterprises",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"1.0.0",
+														"enterprises"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "22604495"
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "msv",
+							"item": [
+								{
+									"name": "no",
+									"item": [
+										{
+											"name": "register",
+											"item": [
+												{
+													"name": "/auth/msv/no/register",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"username\": \"username\",\n    \"password\": \"password\",\n    \"confirmedPassword\": \"password\",\n    \"person\": {\n        \"firstName\": \"George\",\n        \"lastName\": \"Machine\",\n        \"gender\": 0,\n        \"email\": \"george@gmail.com\",\n        \"phoneNumber\": \"\",\n        \"streetAddress\": \"Michi\",\n        \"postalCode\": \"00-785\",\n        \"city\": \"Las Vegas\",\n        \"state\": \"Nevada\"\n    }\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/auth/msv/no/register",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"msv",
+																"no",
+																"register"
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"username\": \"username\",\n    \"password\": \"password\",\n    \"confirmedPassword\": \"password\",\n    \"person\": {\n        \"firstName\": \"George\",\n        \"lastName\": \"Machine\",\n        \"gender\": 0,\n        \"email\": \"george@gmail.com\",\n        \"phoneNumber\": \"\",\n        \"streetAddress\": \"Michi\",\n        \"postalCode\": \"00-785\",\n        \"city\": \"Las Vegas\",\n        \"state\": \"Nevada\"\n    }\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/auth/1.0.0/msv/no/register",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"auth",
+																		"1.0.0",
+																		"msv",
+																		"no",
+																		"register"
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/auth/msv/no/register/confirmation/:id",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/auth/msv/no/register/confirmation/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"msv",
+																"no",
+																"register",
+																"confirmation",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "2ffc41ea-d7fc-4779-89d5-863dc011bcbe",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "request",
+											"item": [
+												{
+													"name": "/auth/msv/no/request/:username/password-reset",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"new\": \"administrator\",\n    \"confirm\": \"administrator\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/auth/msv/no/request/:username/password-reset",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"msv",
+																"no",
+																"request",
+																":username",
+																"password-reset"
+															],
+															"variable": [
+																{
+																	"key": "username",
+																	"value": "proident commodo",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "{\n    \"new\": \"administrator\",\n    \"confirm\": \"administrator\"\n}",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/auth/1.0.0/msv/no/request/:username/password-reset",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"auth",
+																		"1.0.0",
+																		"msv",
+																		"no",
+																		"request",
+																		":username",
+																		"password-reset"
+																	],
+																	"variable": [
+																		{
+																			"key": "username",
+																			"value": "proident commodo",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/auth/msv/no/request/password-reset/confirmation/:id",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/auth/msv/no/request/password-reset/confirmation/:id",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"msv",
+																"no",
+																"request",
+																"password-reset",
+																"confirmation",
+																":id"
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "2ffc41ea-d7fc-4779-89d5-863dc011bcbe",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/auth/msv/no/login",
+											"request": {
+												"method": "POST",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"username\": \"kskrzypczyk\",\n    \"password\": \"administrator\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/msv/no/login",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"msv",
+														"no",
+														"login"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"name": "Content-Type",
+																"value": "application/json",
+																"type": "text"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "{\r\n    \"username\": \"kskrzypczyk\",\r\n    \"password\": \"administrator\"\r\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/auth/1.0.0/msv/refresh-token",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"1.0.0",
+																"msv",
+																"refresh-token"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/auth/msv/no/logout",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/msv/no/logout",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"msv",
+														"no",
+														"logout"
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/auth/msv/refresh-token",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/auth/msv/refresh-token",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"msv",
+												"refresh-token"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/auth/msv/session",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/auth/msv/session",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"msv",
+												"session"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/auth/msv/change/password",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"new\": \"administrator\",\n    \"confirm\": \"administrator\",\n    \"current\": \"administrator\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/auth/msv/change/password",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"msv",
+												"change",
+												"password"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"new\": \"administrator\",\n    \"confirm\": \"administrator\",\n    \"current\": \"administrator\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/1.0.0/msv/change/password",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"1.0.0",
+														"msv",
+														"change",
+														"password"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/auth/msv/close-account",
+									"request": {
+										"method": "DELETE",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/auth/msv/close-account",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"msv",
+												"close-account"
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/1.0.0/msv/close-account",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"1.0.0",
+														"msv",
+														"close-account"
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "person",
+							"item": [
+								{
+									"name": "account",
+									"item": [
+										{
+											"name": "/auth/person/account",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/auth/person/account",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"person",
+														"account"
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/auth/person/account",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"firstName\": \"Konrad\",\n    \"lastName\": \"Skrzypczyk\",\n    \"gender\": 0,\n    \"email\": \"konrad@skrzypczyk.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"00-175\",\n    \"city\": \"Gliwice\",\n    \"state\": \"Śląsk\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/auth/person/account",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"auth",
+														"person",
+														"account"
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"firstName\": \"Konrad\",\n    \"lastName\": \"Skrzypczyk\",\n    \"gender\": 0,\n    \"email\": \"konrad@skrzypczyk.com\",\n    \"phoneNumber\": \"\",\n    \"streetAddress\": \"\",\n    \"postalCode\": \"00-175\",\n    \"city\": \"Gliwice\",\n    \"state\": \"Śląsk\"\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/auth/1.0.0/person/account",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"auth",
+																"1.0.0",
+																"person",
+																"account"
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/auth/gateway/esp-eud/permissions/:espId",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/auth/gateway/esp-eud/permissions/:espId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"auth",
+										"gateway",
+										"esp-eud",
+										"permissions",
+										":espId"
+									],
+									"variable": [
+										{
+											"key": "espId",
+											"value": "1",
+											"description": "(Required) "
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/auth/1.0.0/gateway/esp-eud/permissions/:espId",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"auth",
+												"1.0.0",
+												"gateway",
+												"esp-eud",
+												"permissions",
+												":espId"
+											],
+											"variable": [
+												{
+													"key": "espId",
+													"value": "22604495",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "22604495"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://edp-gateway.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}

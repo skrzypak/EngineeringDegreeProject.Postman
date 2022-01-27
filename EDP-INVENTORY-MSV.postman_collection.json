@@ -1,0 +1,1115 @@
+{
+	"info": {
+		"_postman_id": "b4b7367a-8518-40be-a808-d0c30c9d7ec3",
+		"name": "EDP-INVENTORY-MSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "inventory",
+			"item": [
+				{
+					"name": "1.0.0",
+					"item": [
+						{
+							"name": "allergens",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/inventory/allergens/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/allergens/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"allergens",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "4",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/inventory/allergens/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/allergens/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"allergens",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/inventory/allergens",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/allergens?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"allergens"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/inventory/allergens",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"gl\",\n    \"name\": \"Gluten\",\n    \"description\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/allergens?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"allergens"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"gl\",\n    \"name\": \"Gluten\",\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/allergens?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"allergens"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/inventory/allergens",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"code\": \"gl\",\n    \"name\": \"Laktoza\",\n    \"description\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/allergens?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"allergens"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 1,\n    \"code\": \"gl\",\n    \"name\": \"Laktoza\",\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/allergens?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"allergens"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "categories",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/inventory/categories/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/categories/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"categories",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "4",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/inventory/categories/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/categories/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"categories",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/inventory/categories",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/categories?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"categories"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/inventory/categories",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"sl\",\n    \"name\": \"Słodycze\",\n    \"description\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/categories?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"categories"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"sl\",\n    \"name\": \"Słodycze\",\n    \"description\": \"\"\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/categories?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"categories"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/inventory/categories",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"id\": 1,\n    \"code\": \"sl\",\n    \"name\": \"Słodycze i cukierki\",\n    \"description\": \"\"\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/categories?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"categories"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"ut i\",\n    \"name\": \"ut cillum\",\n    \"description\": \"eiusmod\",\n    \"id\": -73158864\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/categories?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"categories"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "msv",
+							"item": [
+								{
+									"name": "/inventory/msv",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/msv?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"msv"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/inventory/msv/:id",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/1.0.0/msv/:id?espId=1&operationType=1&quantity=5",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"1.0.0",
+												"msv",
+												":id"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "operationType",
+													"value": "1"
+												},
+												{
+													"key": "quantity",
+													"value": "5"
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "4",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/inventory/msv/products/:productId",
+									"request": {
+										"method": "PATCH",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/msv/products/:productId?espId=1&operationType=1&quantity=5&unitMeasureValue=250",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"msv",
+												"products",
+												":productId"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "operationType",
+													"value": "1"
+												},
+												{
+													"key": "quantity",
+													"value": "5"
+												},
+												{
+													"key": "unitMeasureValue",
+													"value": "250"
+												}
+											],
+											"variable": [
+												{
+													"key": "productId",
+													"value": "1",
+													"description": "(Required) "
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/inventory/msv/summary",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/msv/summary?espId=1&startDate=2020-01-01&endDate=2023-01-01",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"msv",
+												"summary"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												},
+												{
+													"key": "startDate",
+													"value": "2020-01-01"
+												},
+												{
+													"key": "endDate",
+													"value": "2023-01-01"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "products",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/inventory/1.0.0/products/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/products/:id?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"products",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "29286313",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/inventory/1.0.0/products/:id?espId=29286313",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"inventory",
+																"1.0.0",
+																"products",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "29286313"
+																}
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "29286313",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "json",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "application/json"
+														}
+													],
+													"cookie": [],
+													"body": "{\n \"code\": \"dese\",\n \"name\": \"do in id sed\",\n \"description\": \"irure velit\",\n \"unit\": 4,\n \"calories\": 87155113,\n \"proteins\": 55119034.80910018,\n \"carbohydrates\": -37865106.40029084,\n \"fats\": 25839240.726887748,\n \"allergens\": [\n  {\n   \"code\": \"cul\",\n   \"name\": \"cupidatat\",\n   \"description\": \"Lorem sunt et\",\n   \"id\": 99386146\n  },\n  {\n   \"code\": \"ex es\",\n   \"name\": \"id esse\",\n   \"description\": \"sit ut velit aliqua in\",\n   \"id\": -3037667\n  }\n ],\n \"category\": {\n  \"code\": \"D\",\n  \"name\": \"eu do aliqua eiusmod\",\n  \"description\": \"aliquip proident magna id\",\n  \"id\": -47828780\n },\n \"id\": 74065013\n}"
+												}
+											]
+										},
+										{
+											"name": "/inventory/1.0.0/products/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/products/:id?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"products",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "29286313",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/inventory/1.0.0/products/:id?espId=29286313",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"inventory",
+																"1.0.0",
+																"products",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "29286313"
+																}
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "29286313",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										}
+									]
+								},
+								{
+									"name": "/inventory/1.0.0/products",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"1.0.0",
+												"products"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "29286313"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"products"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/inventory/1.0.0/products",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"do s\",\n    \"name\": \"amet Ut\",\n    \"description\": \"ipsum\",\n    \"unit\": 0,\n    \"calories\": 47837639,\n    \"proteins\": 55640332.54624191,\n    \"carbohydrates\": -19849667.50392498,\n    \"fats\": 93772594.30442914,\n    \"allergens\": [\n        -54268304,\n        -87216217\n    ],\n    \"category\": 82443926\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"1.0.0",
+												"products"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "29286313"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"al\",\n    \"name\": \"velit est reprehenderit\",\n    \"description\": \"cillum sint ex\",\n    \"unit\": 4,\n    \"calories\": 80023771,\n    \"proteins\": 63731663.92231572,\n    \"carbohydrates\": 28213105.688309968,\n    \"fats\": 29668572.231599376,\n    \"allergens\": [\n        41414306,\n        -46455154\n    ],\n    \"category\": -6692312\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"products"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/inventory/1.0.0/products",
+									"request": {
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"v\",\n    \"name\": \"cillum dolore\",\n    \"description\": \"Excepteur Duis ea cillum occaecat\",\n    \"unit\": 2,\n    \"calories\": 36358224,\n    \"proteins\": 1786354.780940473,\n    \"carbohydrates\": 94695579.76360804,\n    \"fats\": 86520136.5391944,\n    \"allergens\": [\n        1831550,\n        69497893\n    ],\n    \"category\": -9243041,\n    \"id\": -82642474\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"inventory",
+												"1.0.0",
+												"products"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "29286313"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "PATCH",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"an\",\n    \"name\": \"proident in\",\n    \"description\": \"magna\",\n    \"unit\": 6,\n    \"calories\": 14493528,\n    \"proteins\": 975700.6127489656,\n    \"carbohydrates\": -88713623.39170177,\n    \"fats\": -5441937.45579578,\n    \"allergens\": [\n        11405675,\n        71359462\n    ],\n    \"category\": -6781493,\n    \"id\": -84628547\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/inventory/1.0.0/products?espId=29286313",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"inventory",
+														"1.0.0",
+														"products"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "29286313"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://edp-gateway.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}

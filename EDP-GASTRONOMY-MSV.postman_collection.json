@@ -1,0 +1,2285 @@
+{
+	"info": {
+		"_postman_id": "acc9b3ab-f513-4ce1-a8eb-a6066c60d06c",
+		"name": "EDP-GASTRONOMY-MSV",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "gastronomy",
+			"item": [
+				{
+					"name": "1.0.0",
+					"item": [
+						{
+							"name": "dishes",
+							"item": [
+								{
+									"name": "{dish Id}",
+									"item": [
+										{
+											"name": "ingredients",
+											"item": [
+												{
+													"name": "/gastronomy/dishes/:dishId/ingredients",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/dishes/:dishId/ingredients?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"dishes",
+																":dishId",
+																"ingredients"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "dishId",
+																	"value": "3",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/dishes/:dishId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"Fantasy Spaghetti\",\n    \"description\": null,\n    \"ingredients\": [\n        {\n            \"valueOfUse\": 3,\n            \"productId\": 10\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/dishes/:dishId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"dishes",
+														":dishId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "dishId",
+															"value": "3",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"name\": \"Fantasy Spaghetti\",\n    \"description\": null,\n    \"ingredients\": [\n        {\n            \"valueOfUse\": 3,\n            \"productId\": 10\n        }\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/dishes/:dishId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"dishes",
+																":dishId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "dishId",
+																	"value": "3",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/dishes/:dishId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/dishes/:dishId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"dishes",
+														":dishId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "dishId",
+															"value": "12",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/dishes/:dishId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/dishes/:dishId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"dishes",
+														":dishId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "dishId",
+															"value": "3",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/dishes/:dishId/allergens",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/dishes/:dishId/allergens?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"dishes",
+														":dishId",
+														"allergens"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "dishId",
+															"value": "3",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/dishes",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Spagetti\",\n    \"description\": \"\",\n    \"ingredients\": [\n        {\n            \"valueOfUse\": 50,\n            \"productId\": 10\n        },\n        {\n            \"valueOfUse\": 250,\n            \"productId\": 12\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/dishes?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"dishes"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"Spagetti\",\n    \"description\": \"\",\n    \"ingredients\": [\n        {\n            \"valueOfUse\": 50,\n            \"productId\": 10\n        },\n        {\n            \"valueOfUse\": 250,\n            \"productId\": 12\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/1.0.0/dishes?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"1.0.0",
+														"dishes"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "json",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "application/json"
+												}
+											],
+											"cookie": [],
+											"body": "-39093128"
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/dishes",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/dishes?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"dishes"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "menus",
+							"item": [
+								{
+									"name": "{menu Id}",
+									"item": [
+										{
+											"name": "dishes",
+											"item": [
+												{
+													"name": "/gastronomy/menus/:menuId/dishes",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/menus/:menuId/dishes?espId=1&menuDishesIds=5&menuDishesIds=4",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"menus",
+																":menuId",
+																"dishes"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "menuDishesIds",
+																	"value": "5"
+																},
+																{
+																	"key": "menuDishesIds",
+																	"value": "4"
+																}
+															],
+															"variable": [
+																{
+																	"key": "menuId",
+																	"value": "5",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/gastronomy/menus/:menuId/dishes",
+													"request": {
+														"method": "POST",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "[\n    {\n        \"dish\": 4,\n        \"mealType\": 1\n    },\n    {\n        \"dish\": 7,\n        \"mealType\": 1\n    }\n]",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/menus/:menuId/dishes?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"menus",
+																":menuId",
+																"dishes"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "menuId",
+																	"value": "5",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "POST",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "[\n    {\n        \"dish\": 4,\n        \"mealType\": 1\n    },\n    {\n        \"dish\": 7,\n        \"mealType\": 1\n    }\n]",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/gastronomy/1.0.0/menus/:menuId/dishes?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"gastronomy",
+																		"1.0.0",
+																		"menus",
+																		":menuId",
+																		"dishes"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "menuId",
+																			"value": "5",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/menus/:menuId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"M1\",\n    \"name\": \"Menu warzywne\",\n    \"description\": \"Menu na dzień 05.11.20\",\n    \"dishes\": [\n        {\n            \"dish\": 5,\n            \"mealType\": 1\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/menus/:menuId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"menus",
+														":menuId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "menuId",
+															"value": "5",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"code\": \"M1\",\n    \"name\": \"Menu warzywne\",\n    \"description\": \"Menu na dzień 05.11.20\",\n    \"dishes\": [\n        {\n            \"dish\": 5,\n            \"mealType\": 1\n        }\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/menus/:menuId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"menus",
+																":menuId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "menuId",
+																	"value": "2",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/menus/:menuId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/menus/:menuId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"menus",
+														":menuId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "menuId",
+															"value": "5",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/menus/:menuId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/menus/:menuId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"menus",
+														":menuId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "menuId",
+															"value": "5",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/menus",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"\",\n    \"name\": \"M1\",\n    \"description\": \"Mock Postman\",\n    \"dishes\": [\n        {\n            \"dish\": 3,\n            \"mealType\": 0\n        },\n        {\n            \"dish\": 4,\n            \"mealType\": 1\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/menus?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"menus"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"\",\n    \"name\": \"M1\",\n    \"description\": \"Mock Postman\",\n    \"dishes\": [\n        {\n            \"dish\": 3,\n            \"mealType\": 0\n        },\n        {\n            \"dish\": 4,\n            \"mealType\": 1\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/1.0.0/menus?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"1.0.0",
+														"menus"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/menus",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/menus?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"menus"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "msv",
+							"item": [
+								{
+									"name": "list",
+									"item": [
+										{
+											"name": "day",
+											"item": [
+												{
+													"name": "/gastronomy/msv/list/day/participants",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/msv/list/day/participants?espId=1&queryDate=2022-01-04",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"msv",
+																"list",
+																"day",
+																"participants"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "queryDate",
+																	"value": "2022-01-04"
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/gastronomy/msv/list/day/group-plan-menu",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/msv/list/day/group-plan-menu?espId=1&queryDate=2022-01-04",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"msv",
+																"list",
+																"day",
+																"group-plan-menu"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "queryDate",
+																	"value": "2022-01-04"
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "nutrition-groups",
+							"item": [
+								{
+									"name": "{nuti Grp Id}",
+									"item": [
+										{
+											"name": "plans",
+											"item": [
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/plans",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/plans?espId=1&archive=true",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-groups",
+																":nutiGrpId",
+																"plans"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "archive",
+																	"value": "true"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "3",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/plans/:nutriPlsId",
+													"request": {
+														"method": "PATCH",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-groups/:nutiGrpId/plans/:nutriPlsId?espId=1&startDate=2022-01-01&endDate=2022-01-20",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"nutrition-groups",
+																":nutiGrpId",
+																"plans",
+																":nutriPlsId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "startDate",
+																	"value": "2022-01-01"
+																},
+																{
+																	"key": "endDate",
+																	"value": "2022-01-20"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "5",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "nutriPlsId",
+																	"value": "1",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-groups/:nutiGrpId/plans/:nutriPlsId?espId=1&startDate=2022-01-01&endDate=2022-01-20",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"gastronomy",
+																		"1.0.0",
+																		"nutrition-groups",
+																		":nutiGrpId",
+																		"plans",
+																		":nutriPlsId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		},
+																		{
+																			"key": "startDate",
+																			"value": "2022-01-01"
+																		},
+																		{
+																			"key": "endDate",
+																			"value": "2022-01-20"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "nutiGrpId",
+																			"value": "6",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "nutriPlsId",
+																			"value": "8",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/plans/:nutiGrpToNutiPlsId",
+													"request": {
+														"method": "DELETE",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/plans/:nutiGrpToNutiPlsId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-groups",
+																":nutiGrpId",
+																"plans",
+																":nutiGrpToNutiPlsId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "5",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "nutiGrpToNutiPlsId",
+																	"value": "4",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "participants",
+											"item": [
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/participants",
+													"request": {
+														"method": "PATCH",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "[\n    {\n        \"participantId\": 5,\n        \"startDate\": \"2020-12-31\",\n        \"endDate\": \"2021-12-31\"\n    },\n    {\n        \"participantId\": 6,\n        \"startDate\": \"2020-12-31\",\n        \"endDate\": \"2023-12-31\"\n    }\n]",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/participants?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-groups",
+																":nutiGrpId",
+																"participants"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "6",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [],
+																"body": {
+																	"mode": "raw",
+																	"raw": "[\n    {\n        \"participantId\": 5,\n        \"startDate\": \"2020-12-31\",\n        \"endDate\": \"2021-12-31\"\n    },\n    {\n        \"participantId\": 6,\n        \"startDate\": \"2020-12-31\",\n        \"endDate\": \"2023-12-31\"\n    }\n]",
+																	"options": {
+																		"raw": {
+																			"language": "json"
+																		}
+																	}
+																},
+																"url": {
+																	"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/participants?espId=1",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"gastronomy",
+																		"nutrition-groups",
+																		":nutiGrpId",
+																		"participants"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "1"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "nutiGrpId",
+																			"value": "3",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/participants",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/participants?espId=1&archive=true",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-groups",
+																":nutiGrpId",
+																"participants"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "archive",
+																	"value": "true"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "5",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												},
+												{
+													"name": "/gastronomy/nutrition-groups/:nutiGrpId/participants",
+													"request": {
+														"method": "DELETE",
+														"header": [
+															{
+																"key": "Content-Type",
+																"value": "application/json"
+															}
+														],
+														"body": {
+															"mode": "raw",
+															"raw": "[\n    -53354967,\n    15354398\n]",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId/participants?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-groups",
+																":nutiGrpId",
+																"participants"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "3",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/nutrition-groups/:nutiGrpId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"Dzieci (gluten)\",\n    \"description\": \"Glutenowcy\",\n    \"participantsToAdd\": [\n        {\n            \"participantId\": 9,\n            \"startDate\": \"2020-03-25\"\n        }\n    ],\n    \"participantsToRemove\": [\n        9\n    ],\n    \"plansToAdd\": [\n        {\n            \"nutritionPlanId\": 5,\n            \"startDate\": \"2020-03-28\",\n            \"endDate\": \"2020-06-28\"\n        }\n    ],\n    \"plansToRemove\": [\n        10\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"nutrition-groups",
+														":nutiGrpId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiGrpId",
+															"value": "10",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"name\": \"Dzieci (gluten)\",\n    \"description\": \"Glutenowcy\",\n    \"participantsToAdd\": [\n        {\n            \"participantId\": 9,\n            \"startDate\": \"2020-03-25\"\n        }\n    ],\n    \"participantsToRemove\": [\n        9\n    ],\n    \"plansToAdd\": [\n        {\n            \"nutritionPlanId\": 5,\n            \"startDate\": \"2020-03-28\",\n            \"endDate\": \"2020-06-28\"\n        }\n    ],\n    \"plansToRemove\": [\n        10\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-groups/:nutiGrpId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"nutrition-groups",
+																":nutiGrpId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiGrpId",
+																	"value": "5",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/nutrition-groups/:nutiGrpId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"nutrition-groups",
+														":nutiGrpId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiGrpId",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/nutrition-groups/:nutiGrpId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/nutrition-groups/:nutiGrpId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"nutrition-groups",
+														":nutiGrpId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiGrpId",
+															"value": "10",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/nutrition-groups",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"name\": \"Dzieci (gluten)\",\n    \"description\": \"Glutenowcy\",\n    \"participants\": [\n        {\n            \"participantId\": 9,\n            \"startDate\": \"2020-03-25\"\n        }\n    ],\n    \"plans\": [\n        {\n            \"nutritionPlanId\": 5,\n            \"startDate\": \"2020-03-28\",\n            \"endDate\": \"2020-06-28\"\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/nutrition-groups?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"nutrition-groups"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"name\": \"Dzieci (gluten)\",\n    \"description\": \"Glutenowcy\",\n    \"participants\": [\n        {\n            \"participantId\": 9,\n            \"startDate\": \"2020-03-25\"\n        }\n    ],\n    \"plans\": [\n        {\n            \"nutritionPlanId\": 5,\n            \"startDate\": \"2020-03-28\",\n            \"endDate\": \"2020-06-28\"\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-groups?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"1.0.0",
+														"nutrition-groups"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/nutrition-groups",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/nutrition-groups?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"nutrition-groups"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "nutrition-plans",
+							"item": [
+								{
+									"name": "{nuti Pls Id}",
+									"item": [
+										{
+											"name": "menus",
+											"item": [
+												{
+													"name": "/gastronomy/nutrition-plans/:nutiPlsId/menus/:menuId",
+													"request": {
+														"method": "PATCH",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-plans/:nutiPlsId/menus/:menuId?espId=1&order=2",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-plans",
+																":nutiPlsId",
+																"menus",
+																":menuId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																},
+																{
+																	"key": "order",
+																	"value": "2"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiPlsId",
+																	"value": "5",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "menuId",
+																	"value": "4",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": [
+														{
+															"name": "Success",
+															"originalRequest": {
+																"method": "PATCH",
+																"header": [],
+																"url": {
+																	"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-plans/:nutiPlsId/menus/:menuId?espId=-39093128&order=-39093128",
+																	"host": [
+																		"{{baseUrl}}"
+																	],
+																	"path": [
+																		"gastronomy",
+																		"1.0.0",
+																		"nutrition-plans",
+																		":nutiPlsId",
+																		"menus",
+																		":menuId"
+																	],
+																	"query": [
+																		{
+																			"key": "espId",
+																			"value": "-39093128"
+																		},
+																		{
+																			"key": "order",
+																			"value": "-39093128"
+																		}
+																	],
+																	"variable": [
+																		{
+																			"key": "nutiPlsId",
+																			"value": "-39093128",
+																			"description": "(Required) "
+																		},
+																		{
+																			"key": "menuId",
+																			"value": "-39093128",
+																			"description": "(Required) "
+																		}
+																	]
+																}
+															},
+															"status": "OK",
+															"code": 200,
+															"_postman_previewlanguage": "text",
+															"header": [
+																{
+																	"key": "Content-Type",
+																	"value": "text/plain"
+																}
+															],
+															"cookie": [],
+															"body": ""
+														}
+													]
+												},
+												{
+													"name": "/gastronomy/nutrition-plans/:nutiPlsId/menus/:menuToPlsId",
+													"request": {
+														"method": "GET",
+														"header": [],
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/nutrition-plans/:nutiPlsId/menus/:menuToPlsId?espId=-39093128",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"nutrition-plans",
+																":nutiPlsId",
+																"menus",
+																":menuToPlsId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "-39093128"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiPlsId",
+																	"value": "-39093128",
+																	"description": "(Required) "
+																},
+																{
+																	"key": "menuToPlsId",
+																	"value": "-39093128",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"response": []
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/nutrition-plans/:nutiPlsId",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"NG2\",\n    \"name\": \"Groups (childrens)\",\n    \"description\": \"\",\n    \"menus\": [\n        {\n            \"menu\": 5,\n            \"order\": 1\n        },\n        {\n            \"menu\": 6,\n            \"order\": 0\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/nutrition-plans/:nutiPlsId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"nutrition-plans",
+														":nutiPlsId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiPlsId",
+															"value": "7",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"code\": \"NG2\",\n    \"name\": \"Groups (childrens)\",\n    \"description\": \"\",\n    \"menus\": [\n        {\n            \"menu\": 5,\n            \"order\": 1\n        },\n        {\n            \"menu\": 6,\n            \"order\": 0\n        }\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-plans/:nutiPlsId?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"nutrition-plans",
+																":nutiPlsId"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "nutiPlsId",
+																	"value": "7",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/nutrition-plans/:nutiPlsId",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/nutrition-plans/:nutiPlsId?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"nutrition-plans",
+														":nutiPlsId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiPlsId",
+															"value": "4",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/nutrition-plans/:nutiPlsId",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy//nutrition-plans/:nutiPlsId?espId=",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"",
+														"nutrition-plans",
+														":nutiPlsId"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": ""
+														}
+													],
+													"variable": [
+														{
+															"key": "nutiPlsId",
+															"value": "7",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/nutrition-plans",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"code\": \"NG1\",\n    \"name\": \"Groups (childrens)\",\n    \"description\": \"\",\n    \"menus\": [\n        {\n            \"menu\": 5,\n            \"order\": 0\n        },\n        {\n            \"menu\": 6,\n            \"order\": 1\n        }\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/nutrition-plans?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"nutrition-plans"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"code\": \"NG1\",\n    \"name\": \"Groups (childrens)\",\n    \"description\": \"\",\n    \"menus\": [\n        {\n            \"menu\": 5,\n            \"order\": 0\n        },\n        {\n            \"menu\": 6,\n            \"order\": 1\n        }\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/1.0.0/nutrition-plans?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"1.0.0",
+														"nutrition-plans"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/nutrition-plans",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/nutrition-plans?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"nutrition-plans"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "participants",
+							"item": [
+								{
+									"name": "{id}",
+									"item": [
+										{
+											"name": "/gastronomy/participants/:id",
+											"request": {
+												"method": "GET",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/participants/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"participants",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "8",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										},
+										{
+											"name": "/gastronomy/participants/:id",
+											"request": {
+												"method": "PUT",
+												"header": [
+													{
+														"key": "Content-Type",
+														"value": "application/json"
+													}
+												],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"id\": 8,\n    \"firstName\": \"John\",\n    \"lastName\": \"Trump\",\n    \"description\": \"Updated\",\n    \"nutritionGroups\": [\n        5\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/participants/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"participants",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "8",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": [
+												{
+													"name": "Success",
+													"originalRequest": {
+														"method": "PUT",
+														"header": [],
+														"body": {
+															"mode": "raw",
+															"raw": "{\n    \"id\": 8,\n    \"firstName\": \"John\",\n    \"lastName\": \"Trump\",\n    \"description\": \"Updated\",\n    \"nutritionGroups\": [\n        5\n    ]\n}",
+															"options": {
+																"raw": {
+																	"language": "json"
+																}
+															}
+														},
+														"url": {
+															"raw": "{{baseUrl}}/gastronomy/1.0.0/participants/:id?espId=1",
+															"host": [
+																"{{baseUrl}}"
+															],
+															"path": [
+																"gastronomy",
+																"1.0.0",
+																"participants",
+																":id"
+															],
+															"query": [
+																{
+																	"key": "espId",
+																	"value": "1"
+																}
+															],
+															"variable": [
+																{
+																	"key": "id",
+																	"value": "8",
+																	"description": "(Required) "
+																}
+															]
+														}
+													},
+													"status": "OK",
+													"code": 200,
+													"_postman_previewlanguage": "text",
+													"header": [
+														{
+															"key": "Content-Type",
+															"value": "text/plain"
+														}
+													],
+													"cookie": [],
+													"body": ""
+												}
+											]
+										},
+										{
+											"name": "/gastronomy/participants/:id",
+											"request": {
+												"method": "DELETE",
+												"header": [],
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/participants/:id?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"participants",
+														":id"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													],
+													"variable": [
+														{
+															"key": "id",
+															"value": "1",
+															"description": "(Required) "
+														}
+													]
+												}
+											},
+											"response": []
+										}
+									]
+								},
+								{
+									"name": "/gastronomy/participants",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/participants?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"participants"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "/gastronomy/participants",
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Trump\",\n    \"description\": \"\",\n    \"nutritionGroups\": [\n        4\n    ]\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/gastronomy/participants?espId=1",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"gastronomy",
+												"participants"
+											],
+											"query": [
+												{
+													"key": "espId",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"response": [
+										{
+											"name": "Success",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\n    \"firstName\": \"John\",\n    \"lastName\": \"Trump\",\n    \"description\": \"\",\n    \"nutritionGroups\": [\n        4\n    ]\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{baseUrl}}/gastronomy/1.0.0/participants?espId=1",
+													"host": [
+														"{{baseUrl}}"
+													],
+													"path": [
+														"gastronomy",
+														"1.0.0",
+														"participants"
+													],
+													"query": [
+														{
+															"key": "espId",
+															"value": "1"
+														}
+													]
+												}
+											},
+											"status": "OK",
+											"code": 200,
+											"_postman_previewlanguage": "text",
+											"header": [
+												{
+													"key": "Content-Type",
+													"value": "text/plain"
+												}
+											],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								}
+							]
+						},
+						{
+							"name": "/gastronomy/products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{baseUrl}}/gastronomy/products?espId=1",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"gastronomy",
+										"products"
+									],
+									"query": [
+										{
+											"key": "espId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://edp-gateway.azurewebsites.net",
+			"type": "string"
+		}
+	]
+}
